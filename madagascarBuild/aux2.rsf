@@ -1,0 +1,15 @@
+3.2-git	sfspike	curvelet/FiltoCurv/madagascarBuild:	atila@JurosComposto	Thu Apr 29 21:05:41 2021
+
+	d2=10
+	o1=0
+	n2=400
+	o2=0
+	label1="Time"
+	data_format="native_float"
+	label2="Distance"
+	esize=4
+	in="/var/tmp/curvelet/FiltoCurv/madagascarBuild/aux2.rsf@"
+	unit1="s"
+	unit2="km"
+	d1=10
+	n1=400

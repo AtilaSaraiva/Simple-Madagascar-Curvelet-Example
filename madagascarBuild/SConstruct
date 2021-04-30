@@ -1,0 +1,30 @@
+from rsf.proj import *
+
+
+Flow("aux1", None,
+        """
+        spike n1=400 n2=400 d1=10 d2=10 mag=200
+        """)
+
+Flow("aux2", None,
+        """
+        spike n1=400 n2=400 d1=10 d2=10 mag=400 k1=200 l1=400
+        """)
+
+Flow("testInputData", ["aux1", "aux2"],
+        """
+        add mode=a ${SOURCES[1]}
+        """)
+
+Flow("dadoFiltrado","testInputData.rsf",
+	"""
+	../sfcurvelet nbs=4 nba=16 ac=1 d1=${SOURCES[0]}
+	""")
+
+Result("dadoFiltrado",
+        """
+        grey gainpanel=a
+        """)
+
+
+End()
